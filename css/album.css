@@ -20,7 +20,7 @@
   background-position: center;
   bottom: -400px;
   left:50px;  
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; /* För smooth effekt */
 }
 
 
@@ -46,3 +46,4 @@
   left:500px;  
   transition: all 0.3s ease-in-out;
 }
+

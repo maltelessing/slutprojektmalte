@@ -1,17 +1,95 @@
 .parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 1 / 3 / 2 / 4; }
-    .div4 { grid-area: 2 / 1 / 3 / 2; }
-    .div5 { grid-area: 2 / 2 / 3 / 3; }
-    .div6 { grid-area: 2 / 3 / 3 / 4; }
-    .div7 { grid-area: 3 / 1 / 4 / 2; }
-    .div8 { grid-area: 3 / 2 / 4 / 3; }
-    .div9 { grid-area: 3 / 3 / 4 / 4; }
+   
+        display: grid;
+        grid-template-columns: auto; /* Låta divvarna bara ta nödvänding plats */
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+      
+}
+
+.div1 { 
+  grid-area: 1 / 1 / 2 / 2; 
+  font-size:3vw; /* Responsiv textstorlek */
+}
+.div2 { 
+  grid-area: 1 / 2 / 2 / 3; 
+  font-size:3vw;
+}
+.div3 { 
+  grid-area: 1 / 3 / 2 / 4; 
+  font-size:3vw;
+}
+.div4 { 
+  grid-area: 2 / 1 / 3 / 2; 
+  width: 400px;
+  height: 600px;
+  position: relative;
+  background-image: url('../bild/billboards.jpeg'); 
+  background-size: cover;
+  background-position: center;
+}
+.div5 { 
+  grid-area: 2 / 2 / 3 / 3; 
+  width: 400px;
+  height: 600px;
+  position: relative;
+  background-image: url('../bild/sposter.jpeg'); 
+  background-size: cover;
+  background-position: center;
+}
+.div6 { 
+  grid-area: 2 / 3 / 3 / 4; 
+  width: 400px;
+  height: 600px;
+  position: relative;
+  background-image: url('../bild/goodfellas.jpeg'); 
+  background-size: cover;
+}
+.div7 { 
+  grid-area: 3 / 1 / 4 / 2; 
+  font-size:2vw;
+}
+.div8 { 
+  grid-area: 3 / 2 / 4 / 3; 
+  font-size:2vw;
+}
+.div9 { 
+  grid-area: 3 / 3 / 4 / 4; 
+  font-size:2vw;
+}
+
+
+.burger {
+font-size: 30px;
+color: darkkhaki;
+cursor:pointer;
+background-color: maroon;
+}
+
+/* Responsiv för mobil */
+@media screen and (max-width: 430px) {
+    .parent {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; 
+            font-size:6vw;}
+        .div2 { grid-area: 4 / 1 / 5 / 2; 
+            font-size:6vw;}
+        .div3 { grid-area: 7 / 1 / 8 / 2; 
+            font-size:6vw;}
+        .div4 { grid-area: 2 / 1 / 3 / 2; }
+        .div5 { grid-area: 5 / 1 / 6 / 2; }
+        .div6 { grid-area: 8 / 1 / 9 / 2; }
+        .div7 { grid-area: 3 / 1 / 4 / 2; 
+            font-size:5vw;}
+        .div8 { grid-area: 6 / 1 / 7 / 2; 
+            font-size:5vw;}
+        .div9 { grid-area: 9 / 1 / 10 / 2; 
+            font-size:5vw;}
+  }
