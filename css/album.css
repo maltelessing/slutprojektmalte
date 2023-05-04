@@ -1,0 +1,48 @@
+
+
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-image: url('../bild/omslagmk.webp'); 
+  background-size: cover;
+  background-position: center;
+  bottom: 0px;
+  left:50px;
+}
+#myAnimation {
+  width: 400px;
+  height: 400px;
+  border-radius: 250px;
+  position: relative;
+  background-image: url('../bild/vinyl2.png'); 
+  background-size: cover;
+  background-position: center;
+  bottom: -400px;
+  left:50px;  
+  transition: all 0.3s ease-in-out;
+}
+
+
+#myContainer2 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background-image: url('../bild/WTER.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  bottom: 800px;
+  left:500px;
+}
+#myAnimation2 {
+  width: 400px;
+  height: 400px;
+  border-radius: 250px;
+  position: relative;
+  background-image: url('../bild/vinyl2.png'); 
+  background-size: cover;
+  background-position: center;
+  bottom: 400px;
+  left:500px;  
+  transition: all 0.3s ease-in-out;
+}
