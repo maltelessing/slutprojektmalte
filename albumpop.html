@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
 	<link rel="stylesheet" type="text/css" href="css/album.css">
-	<link rel="stylesheet" type="text/css" href="css/film.css">
+	
 </head>
 <body>
 	 <!-- Meny--> 
@@ -20,13 +20,56 @@
 	  
 	  <span class=burger onclick="openNav()">&#9776; POP!kulturkompassen.se</span>
 
-	  
+	 
 	 <!-- Skiv-animering--> 
-<div id="myAnimation"></div>
-<div onmouseover="myMove()" onmouseout="nerMove()" style="cursor: pointer;" id="myContainer"></div>
+ <div class="parent">
+	 
+<div class="rubrik1"> Favorit just nu </div>
+<div class="rubrik2"> Bäst från 2023</div>
+<div class="beskrivning1"> 5/5</div>
+<div class="beskrivning2"> 5/5</div>
 
-<div id="myAnimation2"></div>
-<div onmouseover="myMove2()" onmouseout="nerMove2()" style="cursor: pointer;" id="myContainer2"></div>
+	<div class="album1">
+		<div id="myAnimation"></div>
+		<div onmouseover="myMove()" onmouseout="nerMove()" style="cursor: pointer;" id="myContainer"></div>
+	</div>
+
+	<div class="album2">
+		<div id="myAnimation2"></div>
+		<div onmouseover="myMove2()" onmouseout="nerMove2()" style="cursor: pointer;" id="myContainer2"></div>
+	</div>
+</div>
+
+<div class="top5">
+	
+	<div class="rubrik"> 5 album jag rekomenderar just nu:</div>
+
+<div class="rad1">
+	<div class="omslag1"> </div>
+	<div class="namn1"> Album 1</div>
+</div>
+
+<div class="rad2"></div>
+	<div class="omslag2"> </div>
+	<div class="namn2"> Album 2</div>
+</div>
+
+<div class="rad3"></div>
+	<div class="omslag3"> </div>	
+	<div class="namn3"> Album 3</div>
+</div>
+
+<div class="rad4"></div>
+	<div class="omslag4"> </div>
+	<div class="namn4"> Album 4</div>
+</div>
+
+<div class="rad5"></div>
+	<div class="omslag5"> </div>
+	<div class="namn5"> Album 5</div>
+</div>	
+
+</div>
 
 
 	<script src="js/sidebar.js"></script>

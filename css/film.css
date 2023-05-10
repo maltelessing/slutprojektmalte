@@ -1,3 +1,11 @@
+.burger {
+  font-size: 30px;
+  color: darkkhaki;
+  cursor:pointer;
+  background-color: maroon;
+  /* position: fixed; */
+  }
+  html {background-color: darkkhaki}
 .parent {
    
         display: grid;
@@ -7,33 +15,102 @@
         grid-row-gap: 0px;
       
 }
+.parent .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #e9e6df;
+    color: black;
+    font-size: 20px;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .film1 { grid-area: 1 / 1 / 2 / 2; 
+    padding: 10px;}
+  .film2 { grid-area: 1 / 2 / 2 / 3; 
+    padding: 10px;}
+  .film3 { grid-area: 1 / 3 / 2 / 4; 
+    padding: 10px;}
+
+.film1 {
+  background-color: darkred;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  text-align: center;
+  color: #e9e6df;
+  margin: 10px;
+}
+
+.film2 {
+  background-color: darkred;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  text-align: center;
+  color: #e9e6df;
+  margin: 10px;
+}
+
+.film3 {
+  background-color: darkred;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  text-align: center;
+  color: #e9e6df;
+  margin: 10px;
+}
 
 .div1 { 
   grid-area: 1 / 1 / 2 / 2; 
   font-size:3vw; /* Responsiv textstorlek */
+  padding: 8px 16px;
 }
 .div2 { 
   grid-area: 1 / 2 / 2 / 3; 
   font-size:3vw;
+  padding: 8px 16px;
 }
 .div3 { 
   grid-area: 1 / 3 / 2 / 4; 
   font-size:3vw;
+  padding: 8px 16px;
 }
 .div4 { 
   grid-area: 2 / 1 / 3 / 2; 
   width: 400px;
   height: 600px;
-  position: relative;
+  position:relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('../bild/billboards.jpeg'); 
   background-size: cover;
-  background-position: center;
+  background-position: center; 
 }
+
+
+
 .div5 { 
   grid-area: 2 / 2 / 3 / 3; 
   width: 400px;
   height: 600px;
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('../bild/sposter.jpeg'); 
   background-size: cover;
   background-position: center;
@@ -43,53 +120,116 @@
   width: 400px;
   height: 600px;
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background-image: url('../bild/goodfellas.jpeg'); 
   background-size: cover;
 }
 .div7 { 
   grid-area: 3 / 1 / 4 / 2; 
   font-size:2vw;
+  padding: 16px 30px;
 }
 .div8 { 
   grid-area: 3 / 2 / 4 / 3; 
   font-size:2vw;
+  padding: 16px 30px;
 }
+
 .div9 { 
   grid-area: 3 / 3 / 4 / 4; 
   font-size:2vw;
+  padding: 16px 30px;
+}
+
+.text1 {
+  padding: 32px 64px;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(155, 14, 14);
+  background-color: rgb(150, 146, 83);
+  margin: 10px;
+  margin-top: 20px;
 }
 
 
-.burger {
-font-size: 30px;
-color: darkkhaki;
-cursor:pointer;
-background-color: maroon;
-}
+.rutorna {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  }
+
+  .ruta1 { grid-area: 1 / 1 / 2 / 2; 
+    background-image: url('../bild/billboards.jpeg'); 
+    padding: 64px 120px;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: darkkhaki;
+    margin: 10px;
+    margin-top: 20px;
+  }
+  
+  .ruta2 { grid-area: 1 / 2 / 2 / 3; 
+    background-image: url('../bild/billboards.jpeg');     
+    padding: 64px 120px;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: darkkhaki;
+    margin: 10px;
+    margin-top: 20px;}
+
+  .ruta3 { grid-area: 2 / 1 / 3 / 2; 
+    background-image: url('../bild/billboards.jpeg'); 
+    padding: 64px 120px;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: darkkhaki;
+    margin: 10px;}
+
+  .ruta4 { grid-area: 2 / 2 / 3 / 3; 
+    background-image: url('../bild/billboards.jpeg'); 
+    padding: 64px 120px;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: darkkhaki;
+    margin: 10px;
+    }
+
+
 
 /* Responsiv för mobil */
 @media screen and (max-width: 430px) {
-    .parent {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        }
-        
-        .div1 { grid-area: 1 / 1 / 2 / 2; 
-            font-size:6vw;}
-        .div2 { grid-area: 4 / 1 / 5 / 2; 
-            font-size:6vw;}
-        .div3 { grid-area: 7 / 1 / 8 / 2; 
-            font-size:6vw;}
-        .div4 { grid-area: 2 / 1 / 3 / 2; }
-        .div5 { grid-area: 5 / 1 / 6 / 2; }
-        .div6 { grid-area: 8 / 1 / 9 / 2; }
-        .div7 { grid-area: 3 / 1 / 4 / 2; 
-            font-size:5vw;}
-        .div8 { grid-area: 6 / 1 / 7 / 2; 
-            font-size:5vw;}
-        .div9 { grid-area: 9 / 1 / 10 / 2; 
-            font-size:5vw;}
-  }
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .film1 { grid-area: 1 / 1 / 2 / 2; }
+    .film2 { grid-area: 2 / 1 / 3 / 2; }
+    .film3 { grid-area: 3 / 1 / 4 / 2; }
+  
+
+  
+  .rutorna {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .ruta1 { grid-area: 1 / 1 / 2 / 2; }
+    .ruta2 { grid-area: 2 / 1 / 3 / 2; }
+    .ruta3 { grid-area: 3 / 1 / 4 / 2; }
+    .ruta4 { grid-area: 4 / 1 / 5 / 2; }
