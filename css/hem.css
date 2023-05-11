@@ -37,11 +37,12 @@
     background-color: rgba(139, 0, 0, 0.69);
     border-radius: 10px;
     padding: 50px;
+  
   }
   
   .länklådor {
   position: absolute;
-  top: calc(50% + 120px); /* för att alltid hållda lådorna rätt under stora rutan*/
+  top: calc(50% + 120px); /* för att alltid hållda länkknapparna rätt under stora rutan*/
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -80,6 +81,15 @@
     text-decoration: underline;
   }
 
-
-
+@media screen and (max-width: 500px) {
   
+  .välkommen{
+    font-size: 10px;
+  
+  }
+
+.låda{
+  width: 160px;  
+  height: 80px;
+}
+}

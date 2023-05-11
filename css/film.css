@@ -211,7 +211,7 @@
     .ruta2:hover,
     .ruta3:hover,
     .ruta4:hover {
-    filter: grayscale(0);
+    filter: grayscale(0); /* ge färg när man hovrar*/
     }
 
 /* Responsiv för mobil */
@@ -241,7 +241,7 @@
     .ruta4 {
       opacity: 0;
       transition: opacity 0.5s ease;
-      width: 50%;
+      filter: grayscale(0); /* i mobilformat fungerar inte hover*/
       margin: 10px; 
     }
     
