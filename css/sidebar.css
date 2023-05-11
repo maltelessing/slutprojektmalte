@@ -1,5 +1,36 @@
 body {
-	font-family: "Helvetica", sans-serif;
+	font-family: "Helvetica", sans-serif
+  }
+  
+  html {background-color: darkkhaki}
+ 
+  .container {
+	position: relative;
+	padding-bottom: 50px; 
+  }
+  
+  .menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px; 
+	background-color: maroon;
+	z-index: 1;
+	padding-top: 10px;
+  }
+  
+  .burger {
+	font-size: 30px;
+	color: darkkhaki;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+  }
+  
+  .menu-text {
+	position: relative;
+	transition: top 0.3s ease;
   }
   
   .sidenav {
@@ -42,4 +73,9 @@ body {
   @media screen and (max-height: 450px) {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
+  }
+
+  .burger {
+	font-size: 25px;
+   
   }
