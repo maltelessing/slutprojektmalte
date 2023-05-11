@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sidebar</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/nyalbum.css">
+   
+    
+</head>
+<body>
+
+
+
+
+    <div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="hem.html">Hem</a>
+		<a href="filmgrid.html">Film</a>
+		<a href="nyalbum.html">Musik</a>
+	  </div>
+	  
+	  
+    <div class="container">
+      <div class="menu-overlay">
+        <span class="burger" onclick="openNav()">&#9776; POP!kulturkompassen.se</span>
+      </div>
+      <div class="menu-text">
+      </div>
+    </div>
+
+
+    <div class="grid-container">
+        <div class="grid-item">
+          <h2>Lyssnade senast på</h2>
+          <div class="image-container">
+            <img src="bild/omslagmk.webp" alt="Omslag Martin Kahn">
+            <div class="hover-overlay"></div>
+            <div class="sliding-image-container hidden">
+              <img src="bild/vinyl.webp" alt="Vinyl">
+            </div>
+          </div>
+          <p>Omslag Martin Kahn av Bob Hund</p>
+        </div>
+        <div class="grid-item">
+          <h2>2023's bästa realse</h2>
+          <div class="image-container">
+            <img src="bild/WTER.jpeg" alt="Welcome to earth">
+            <div class="hover-overlay"></div>
+            <div class="sliding-image-container hidden">
+              <img src="bild/vinyl.webp" alt="Vinyl">
+            </div>
+          </div>
+          <p>Welcome to Earth av WTER</p>
+        </div>
+      </div>
+      
+      
+
+
+    <script src="js/sidebar.js"></script>
+    
+</body>

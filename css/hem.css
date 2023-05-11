@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&family=Silkscreen&display=swap');
+.container {
+    position: relative;
+    padding-bottom: 50px; 
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: maroon;
+    z-index: 1;
+    padding-top: 10px;
+  }
+  
+  .burger {
+    font-size: 30px;
+    color: darkkhaki;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-weight: 600;
+
+  }
+  
+  .menu-text {
+    position: relative;
+    transition: top 0.3s ease;
+  }
+  
+  
+   html {background-color: darkkhaki}
+  
+  
+  
+
+   .bakgrund {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../bild/bakgrund.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 21, 21, 0.687); 
+  }
+
+  .välkommen {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(139, 0, 0, 0.69);
+    border-radius: 10px;
+    padding: 50px;
+  }
+  
+  .länklådor {
+  position: absolute;
+  top: calc(50% + 120px); /* för att alltid hållda lådorna rätt under stora rutan*/
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+  
+  .låda {
+    width: 200px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(189, 168, 107);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .låda a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+  }
+
+  .låda:hover {
+    background-color: rgb(162, 133, 74);
+    cursor: pointer;
+  }
+  
+  .låda a:hover {
+    text-decoration: underline;
+  }

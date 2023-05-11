@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&family=Silkscreen&display=swap');
+.container {
+    position: relative;
+    padding-bottom: 50px; 
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: maroon;
+    z-index: 1;
+    padding-top: 10px;
+  }
+  
+  .burger {
+    font-size: 30px;
+    color: darkkhaki;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arimo', sans-serif;
+    font-family: 'Silkscreen', cursive;
+    font-weight: 600;
+
+  }
+  
+  .menu-text {
+    position: relative;
+    transition: top 0.3s ease;
+  }
+  
+  
+   html {background-color: darkkhaki}
+
+.grid-container {
+    display: grid; /* Använder CSS Grid för att skapa en grid-layout */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Definierar grid-kolumnerna, med en minbredd på 400px och en fraktion av tillgängligt utrymme (1fr) */
+    gap: 20px; /* Definierar mellanrummet mellan grid-elementen */
+  }
+  
+  .grid-item {
+    position: relative; /* Sätter positionen på grid-elementen som relativ för att möjliggöra positionering av dess innehåll */
+    background-color: darkred;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: #e9e6df;
+    margin: 10px;
+    position: relative;  
+}
+  
+  .image-container {
+    position: relative; /* Sätter positionen på bild-container som relativ för att möjliggöra positionering av dess innehåll */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ställer in bredden på bilderna till 100% för att anpassa dem till sin container */
+    height: auto; /* Ställer in höjden på bilderna automatiskt för att bevara deras ursprungliga proportioner */
+    object-fit: cover; /* Ställer in hur bilderna fyller sin container */
+  }
+  
+  .hover-overlay {
+    position: absolute; /* Ställer in positionen på överlagret som absolut för att placera det över bilden */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Anger bakgrundsfärgen för överlagret med 50% genomsiktighet (rgba) */
+    opacity: 0; /* Anger att överlagret ska vara osynligt som standard */
+    transition: opacity 0.3s; /* Tillämpar en övergångseffekt på opaciteten med en varaktighet på 0.3 sekunder */
+  }
+  
+  .sliding-image-container {
+    position: absolute; /* Ställer in positionen på den glidande bild-container som absolut för att placera den över bilden */
+    bottom: -100%; /* Flyttar den glidande bild-container uppåt och döljer den initialt under bilden */
+    left: 0;
+    width: 100%;
+    height: 100%;
+   overflow: hidden; /* Gömmer innehållet som överstiger containerens storlek */
+    transition: bottom 0.3s; /* Tillämpar en övergångseffekt på bottom-egenskapen med en varaktighet på 0.3 sekunder */
+  }
+  
+  .hidden {
+    display: none; /* Gömmer elementet genom att inte visa det */
+  }
+  
+  .grid-item:hover .hover-overlay {
+    opacity: 1; /* Ändrar opaciteten på överlagret till 1 när man hovrar över grid-elementet */
+  }
+  
+  .grid-item:hover .sliding-image-container {
+    bottom: 0; /* Flyttar den glidande bild-container nedåt och visar den när man hovrar över grid-elementet */
+    display: block; /* Visar den glidande bild-container genom att ändra display-egenskapen till block */
+  }
+  
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Ändrar grid
+  
