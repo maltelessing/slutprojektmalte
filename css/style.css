@@ -1,0 +1,523 @@
+/* typsnitt*/
+body {
+	font-family: "Helvetica", sans-serif
+  }
+/* Bakgrundsfärg för hela dokumentet */
+html {background-color: darkkhaki}
+ 
+/* styling av meny/sidebar */ 
+
+  .container {
+	position: relative;
+	padding-bottom: 50px; /* Avstånd mellan menybar och innehåll */
+  }
+  
+  /* Själva baren */
+  .menu-overlay {
+	position: fixed; /* Fast i topppen när man skrollar*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px; 
+	background-color: maroon;
+	z-index: 1;
+	padding-top: 10px;
+  }
+   /*Knapp för att få fram menyn*/
+  .burger {
+	font-size: 25px;
+	color: darkkhaki;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+  }
+  
+  /* side bar + animation*/
+  .sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #2F4F4F;
+	opacity: 0.95;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	text-align:center;
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: 	#549595;
+	display: block;
+	transition: 0.1s;
+  }
+  
+  .sidenav a:hover{
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+
+
+/* Indexsidans styling*/
+
+.bakgrund {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../bild/bakgrund.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+ /* styling för bild så den blir mer anonym och ej tar så mycket fokus */ 
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;       
+    height: 100%;
+    background-color: rgba(100, 21, 21, 0.687); 
+  }
+
+  /*startruta, ska befinna sig i mitten, gett den mjuka kanter */
+  .valkommen {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(139, 0, 0, 0.69);
+    border-radius: 10px;
+    padding: 50px;
+  
+  }
+  
+  /* styling för länkarna generelllt */
+  .lanklador {
+  position: absolute;
+  top: calc(50% + 120px); /* för att alltid hållda länkknapparna rätt under stora rutan*/
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+  /* specifik styling för lådan x2 */
+  .lada {
+    width: 200px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(189, 168, 107);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .lada a{
+    text-decoration: none; /* undvika "länk-underlinern" */
+    color: #fff;
+    font-size: 35px;
+  }
+
+  .lada:hover {
+    background-color: rgb(162, 133, 74);
+    cursor: pointer; /* för att få användaren att förstå att det är en länk */
+  }
+  
+  .låda a:hover {
+    text-decoration: underline; /* för att få användaren att förstå att det är en länk */
+  }
+
+  /* för att fungera i mindre format, gjort vissa element mindre*/
+@media screen and (max-width: 500px) {
+  
+    .valkommen{
+        font-size: 10px;
+    }
+
+    .lada{
+        width: 160px;  
+        height: 80px;
+    }
+    }
+
+
+/* Filmsidans styling */ 
+
+
+
+.parent .btn { /* rating-rutan */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+background-color: #e9e6df;
+color: black;
+font-size: 20px;
+padding: 16px 30px;
+border: none;
+border-radius: 10px;
+text-align: center;
+}
+
+/* grid-system */
+.parent {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Låta divvarna bara ta nödvänding plats */
+grid-template-rows: 1fr;
+grid-gap: 10px;
+}
+
+/* film1,2,3 containrar för bild och text*/
+.film1 { grid-area: 1 / 1 / 2 / 2; 
+padding: 10px;}
+.film2 { grid-area: 1 / 2 / 2 / 3; 
+padding: 10px;}
+.film3 { grid-area: 1 / 3 / 2 / 4; 
+padding: 10px;}
+
+.film1 {
+background-color: darkred;
+font-size: 2.5vw;
+border-radius: 10px;
+text-align: center;
+color: #e9e6df;
+margin: 10px;
+position: relative;
+}
+
+.film2 {
+background-color: darkred;
+font-size: 2.5vw;
+border-radius: 10px;
+text-align: center;
+color: #e9e6df;
+margin: 10px;
+position: relative;
+}
+
+.film3 {
+background-color: darkred;
+font-size: 2.5vw;
+border-radius: 10px;
+text-align: center;
+color: #e9e6df;
+margin: 10px;
+position: relative;
+}
+
+.div1 { 
+grid-area: 1 / 1 / 2 / 2; 
+font-size:40px; 
+padding: 8px 16px;
+}
+.div2 { 
+grid-area: 1 / 2 / 2 / 3; 
+font-size:40px;
+padding: 8px 16px;
+}
+.div3 { 
+grid-area: 1 / 3 / 2 / 4; 
+font-size:40px;
+padding: 8px 16px;
+}
+
+/* styling för de tre posters*/
+.div4,
+.div5,
+.div6 {
+width: 100%;
+height: 0;
+padding-bottom: 150%; 
+position: relative;
+background-size: cover;
+background-position: center;
+border-radius: 10px;
+}
+
+.div4 {
+background-image: url('../bild/billboards.jpeg');
+}
+
+.div5 {
+background-image: url('../bild/sposter.jpeg');
+}
+
+.div6 {
+background-image: url('../bild/goodfellas.jpeg');
+}
+
+
+.div7 { 
+grid-area: 3 / 1 / 4 / 2; 
+font-size:30px;
+padding: 16px 30px;
+}
+
+.div8 { 
+grid-area: 3 / 2 / 4 / 3; 
+font-size:30px;
+padding: 16px 30px;
+}
+
+.div9 { 
+grid-area: 3 / 3 / 4 / 4; 
+font-size:30px;
+padding: 16px 30px;
+}
+
+/* rubrik */
+.text1 {
+padding: 32px 64px;
+font-size: 25px;
+border-radius: 10px;
+text-align: center;
+color: rgb(155, 14, 14);
+background-color: rgb(150, 146, 83);
+margin: 10px;
+margin-top: 20px;
+
+}
+
+.rutorna {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 5%;
+grid-row-gap: 5%;
+}
+
+.ruta1 { grid-area: 1 / 1 / 2 / 2; 
+display: flex;
+background-image: url('../bild/billboards.jpeg'); 
+padding: 64px 120px;
+font-size: 25px;
+border-radius: 10px;
+text-align: center;
+color: darkkhaki;
+margin: 10px;
+margin-top: 20px;
+align-items: center; /* Centrerar vertikalt */
+justify-content: center; /* Centrerar horisontellt */
+filter: grayscale(100);
+}
+
+.ruta2 { grid-area: 1 / 2 / 2 / 3; 
+display: flex;
+background-image: url('../bild/billboards.jpeg');     
+padding: 64px 120px;
+font-size: 25px;
+border-radius: 10px;
+text-align: center;
+color: darkkhaki;
+margin: 10px;
+margin-top: 20px;
+align-items: center; 
+justify-content: center;
+filter: grayscale(100);}
+
+.ruta3 { grid-area: 2 / 1 / 3 / 2; 
+display: flex;
+background-image: url('../bild/billboards.jpeg'); 
+padding: 64px 120px;
+font-size: 25px;
+border-radius: 10px;
+text-align: center;
+color: darkkhaki;
+align-items: center; 
+justify-content: center; 
+margin: 10px;
+filter: grayscale(100);}
+
+.ruta4 { grid-area: 2 / 2 / 3 / 3; 
+display: flex;
+align-items: center; 
+justify-content: center; 
+background-image: url('../bild/billboards.jpeg');
+padding: 64px 120px;
+font-size: 25px;
+border-radius: 10px;
+text-align: center;
+color: darkkhaki;
+margin: 10px;
+margin-top: 20px;
+filter: grayscale(100);
+}
+
+.ruta1:hover,
+.ruta2:hover,
+.ruta3:hover,
+.ruta4:hover {
+filter: grayscale(0); /* ge färg när man hovrar*/
+}
+
+/* Responsiv för mobil */
+@media screen and (max-width: 800px) {
+.parent {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.film1 { grid-area: 1 / 1 / 2 / 2; }
+.film2 { grid-area: 2 / 1 / 3 / 2; }
+.film3 { grid-area: 3 / 1 / 4 / 2; }
+
+
+
+.rutorna {
+  display: flex;
+  flex-direction: column;
+}
+
+.ruta1,
+.ruta2,
+.ruta3,
+.ruta4 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  filter: grayscale(0); /* i mobilformat fungerar inte hover*/
+  margin: 10px; 
+}
+
+.show {
+  opacity: 1;
+}
+}
+
+
+
+/* Musiksidans styling */
+
+/* delar av misslyckad animation*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    background-color: darkred;
+    font-size: 2.5vw;
+    border-radius: 10px;
+    text-align: center;
+    color: #e9e6df;
+    margin: 10px;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sliding-image-container {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: bottom 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+  
+ /*styling för listan*/
+
+ .albumtitel{
+   display: flex;
+   justify-content: center;
+   font-size: 40px;
+ }
+
+  ul {
+    background: darkred;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  ul li {
+    background: darkkhaki;
+    color: darkred;
+    margin: 5px;
+    font-size: 50px;
+    list-style-type: none; /* för att undvika "list-prickarna" */
+    border-radius: 10px;
+
+  }  
+
+  .bild{
+    width: 100px;
+    height: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+  }  
+
+  .text{
+font-size: 50px;
+   }  
+
+
+
+
+  
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Ändrar grid*/
+    }
+    .text{
+        font-size: 25px;
+     }  
+} 
